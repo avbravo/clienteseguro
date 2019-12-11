@@ -28,17 +28,10 @@ public class Start {
         try {
             HttpAuthenticationFeature autentificacion = HttpAuthenticationFeature.basic("myusername", "mypassword");
 
-
             Client client = ClientBuilder.newClient();
             client.register(autentificacion);
 
 
-            /**
-             * 
-             */
-
-            
-            
             
             WebTarget target = client.target("http://localhost:8080/resources/paises");
 
@@ -52,8 +45,6 @@ public class Start {
             }
 
             
-            
-           
             
         } catch (Exception e) {
             System.out.println("main() " + e.getLocalizedMessage());
